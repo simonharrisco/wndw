@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Website for WNDW, a free helper app for sharing ultrawide monitors
