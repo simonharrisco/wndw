@@ -1,19 +1,30 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-
+import { AiFillApple, AiFillWindows } from "react-icons/ai";
+import { ImWindows8 } from "react-icons/im";
 export default function Home() {
+  function handleClickNav(e, divstring) {
+    e.preventDefault();
+    document.querySelector(divstring).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
   return (
     <div className="container">
       <nav>
         <div className="nav-item">
-          <a href="/">Demo</a>
+          <a href="/" onClick={(e) => handleClickNav(e, "#video-section")}>
+            Demo
+          </a>
         </div>
         <div className="nav-item">
-          <a href="/">Testimonials</a>
+          <a href="/" onClick={(e) => handleClickNav(e, "#video-section")}>
+            Testimonials
+          </a>
         </div>
         <div className="nav-item">
-          <a href="/">Contact</a>
+          <a href="https://github.com/simonharrisco">Github</a>
         </div>
         <div className="nav-item">
           <a href="/">Download</a>
@@ -30,7 +41,8 @@ export default function Home() {
       <main>
         <section id="subtitle-section">
           <p className="description">
-            Designed to take the pain out of presenting your ultrawide monitor
+            Designed to take the pain out of presenting your ultrawide monitor.
+            Free {"&"} open source.
           </p>
           <button>Download</button>
         </section>
@@ -80,6 +92,16 @@ export default function Home() {
             <div className="testimonial-name">Also Me</div>
           </div>
         </section>
+        <section id="clout-chasing">
+          <h3 className="clout-footer">
+            Made by{" "}
+            <a href="https://twitter.com/SimonHarrisCo">@simonharrisco</a>{" "}
+            <br />
+            on <a href="https://twitter.com/SimonHarrisCo">Twitter</a> <br />
+            {"& "} <a href="https://github.com/simonharrisco">Github</a>
+            <br />
+          </h3>
+        </section>
       </main>
 
       <style jsx>{`
@@ -108,7 +130,7 @@ export default function Home() {
           width: 100%;
           display: block;
           margin: 0 auto;
-          padding-top: 200px;
+          padding-top: 100px;
         }
 
         h1 {
@@ -125,7 +147,7 @@ export default function Home() {
         }
 
         #subtitle-section {
-          margin-bottom: 200px;
+          margin-bottom: 100px;
         }
 
         main {
@@ -177,7 +199,7 @@ export default function Home() {
 
         #example-text-holder {
           width: 310px;
-          height: 300px;
+          height: 150px;
           margin-left: auto;
           margin-right: 350px;
           position: relative;
@@ -198,7 +220,7 @@ export default function Home() {
         }
         #video-section {
           text-align: center;
-          padding-bottom: 150px;
+          padding-bottom: 50px;
           margin-top: 100px;
         }
         h3 {
@@ -230,7 +252,7 @@ export default function Home() {
         }
         .testimonial {
           width: 300px;
-
+          padding: 20px 20px;
           display: flex;
           flex-direction: column;
           justify-content: top;
@@ -265,6 +287,15 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+
+        .clout-footer {
+          line-height: 1.3;
+          padding-bottom: 100px;
+        }
+
+        .clout-footer > a {
+          text-decoration: underline;
         }
       `}</style>
 
