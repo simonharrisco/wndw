@@ -24,7 +24,7 @@ export default function Home() {
           </a>
         </div>
         <div className="nav-item">
-          <a href="https://github.com/simonharrisco">Github</a>
+          <a href="https://github.com/simonharrisco/WNDW.app">Github</a>
         </div>
         <div className="nav-item">
           <a href="/">Download</a>
