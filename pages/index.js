@@ -10,15 +10,20 @@ export default function Home() {
       behavior: "smooth",
     });
   }
+  function handleButtonClick(e) {
+    e.preventDefault();
+    window.location.href =
+      "https://github.com/simonharrisco/WNDW.app/releases/tag/release";
+  }
   return (
     <div className="container">
       <nav>
-        <div className="nav-item">
+        <div className="nav-item none-test">
           <a href="/" onClick={(e) => handleClickNav(e, "#video-section")}>
             Demo
           </a>
         </div>
-        <div className="nav-item">
+        <div className="nav-item none-test">
           <a href="/" onClick={(e) => handleClickNav(e, "#video-section")}>
             Testimonials
           </a>
@@ -26,8 +31,10 @@ export default function Home() {
         <div className="nav-item">
           <a href="https://github.com/simonharrisco/WNDW.app">Github</a>
         </div>
-        <div className="nav-item">
-          <a href="/">Download</a>
+        <div className="nav-item none-test">
+          <a href="https://github.com/simonharrisco/WNDW.app/releases/tag/release">
+            Download
+          </a>
         </div>
       </nav>
       <Head>
@@ -44,7 +51,7 @@ export default function Home() {
             Designed to take the pain out of presenting your ultrawide monitor.
             Free {"&"} open source.
           </p>
-          <button>Download</button>
+          <button onClick={(e) => handleButtonClick(e)}>Download</button>
         </section>
         <section>
           <div id="example-holder">
@@ -146,6 +153,12 @@ export default function Home() {
           letter-spacing: -0.09em;
         }
 
+        @media only screen and (max-width: 850px) {
+          h1 {
+            font-size: 6rem;
+          }
+        }
+
         #subtitle-section {
           margin-bottom: 100px;
         }
@@ -218,6 +231,7 @@ export default function Home() {
           right: 0px;
           transform: translate(-30%, -120%);
         }
+
         #video-section {
           text-align: center;
           padding-bottom: 50px;
@@ -258,6 +272,7 @@ export default function Home() {
           justify-content: top;
           align-items: left;
         }
+
         .testimonial-text {
           font-size: 1.1rem;
           line-height: 1.3;
@@ -296,6 +311,40 @@ export default function Home() {
 
         .clout-footer > a {
           text-decoration: underline;
+        }
+
+        @media screen and (max-width: 600px) {
+          .description {
+            width: auto;
+          }
+          #example-arrow {
+            display: none !important;
+          }
+          #example-text-holder {
+            width: 100%;
+          }
+          #example-holder {
+            margin-right: auto;
+          }
+          .none-test {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          #testimonial-section {
+            display: block !important;
+          }
+          .testimonial {
+            display: block !important;
+            width: 100%;
+          }
+          #t2 {
+            margin-top: 40px;
+          }
+          #t3 {
+            margin-top: 40px;
+          }
         }
       `}</style>
 
