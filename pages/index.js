@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import { AiFillApple, AiFillWindows } from "react-icons/ai";
-import { ImWindows8 } from "react-icons/im";
+// import { AiFillApple, AiFillWindows } from "react-icons/ai";
+// import { ImWindows8 } from "react-icons/im";
 export default function Home() {
   function handleClickNav(e, divstring) {
     e.preventDefault();
