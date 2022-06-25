@@ -63,7 +63,7 @@ export default function Home() {
         <section id="video-section">
           <h3>See it in action</h3>
           <video controls>
-            <source src="/br.mp4" type="video/mp4" />
+            <source src="/br.mov" type="video/mp4" />
           </video>
         </section>
         <section id="testimonial-title">
