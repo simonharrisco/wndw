@@ -40,21 +40,6 @@ export default function Home() {
       <Head>
         <title>WNDW</title>
         <link rel="icon" href="/favicon.ico" />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-FPK6T0X8ZQ"
-        ></script>
-        <script>
-          dangerouslySetInnerHTML=
-          {{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-FPK6T0X8ZQ');`,
-          }}
-        </script>
       </Head>
 
       <div id="header-container">
