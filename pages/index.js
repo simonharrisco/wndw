@@ -67,8 +67,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section id="description-section">
+          <h3>How it works</h3>
+          <p>
+            It works by showing a section of your desktop within a window, so
+            you can share that section using the 'share window' feature in video
+            calls.
+          </p>
+        </section>
         <section id="video-section">
-          <h3>See it in action</h3>
           <video controls>
             <source src="/br.mov" type="video/mp4" />
           </video>
@@ -231,11 +238,27 @@ export default function Home() {
           right: 0px;
           transform: translate(-30%, -120%);
         }
+        #description-section {
+          margin-top: 150px;
+          margin-bottom: 0px;
+          padding-top: 50px;
+          padding-bottom: 10px;
+          text-align: center;
+          max-width: 600px;
+          width: 100%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          // background-color: #151515;
+          border-radius: 10px;
+        }
+        #description-section h3 {
+          margin-bottom: 0px;
+        }
 
         #video-section {
           text-align: center;
           padding-bottom: 50px;
-          margin-top: 100px;
         }
         h3 {
           background: linear-gradient(136.64deg, #1144f9 5.27%, #11f997 50.92%);
